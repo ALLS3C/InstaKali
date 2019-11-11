@@ -25,6 +25,10 @@ git clone https://github.com/leebaird/discover.git /opt/Discover
 cd /opt/Discover
 ./setup.sh
 
+#Unziping rockyou.txt
+pause "Press Enter to unzip rockyou.txt"
+gunzip /usr/share/wordlists/rockyou.txt.gz
+
 #Download WCE
 pause "Press Enter to install WCE"
 cd ~/Desktop
