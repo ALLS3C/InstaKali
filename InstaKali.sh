@@ -57,17 +57,32 @@ pause "Press Enter to install DBeaver"
 apt install dbeaver dbeaver-dbgsym -y
 
 #Installing Empire
+pause "Press Enter to install Empire"
 git clone https://github.com/EmpireProject/Empire.git /opt/Empire
 
 #Installing ExifTool
+pause "Press Enter to install ExifTool"
 apt install libimage-exiftool-perl -y
 
 #Installing GDB
+pause "Press Enter to install everything for GDB (Gef etc)"
 apt install gdb -y
 
-#Installing GDB-Peda
-git clone https://github.com/longld/peda.git ~/Peda
-echo "source ~/Peda/peda.py" >> ~/.gdbinit
+#Installing cmake (needed to Gef install)
+apt install cmake -y
+
+#Installing Gef
+wget -O ~/.gdbinit-gef.py -q https://github.com/hugsy/gef/raw/master/gef.py
+echo source ~/.gdbinit-gef.py >> ~/.gdbinit
+
+#Installing Keystone, Unicorn and Ropper
+pip3 install keystone-engine unicorn ropper
+
+#Installing PwnTools
+pause "Press Enter to install PwnTools"
+apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential -y
+python3 -m pip install --upgrade pip
+python3 -m pip install --upgrade git+https://github.com/Gallopsled/pwntools.git@dev3
 
 #Installing Gobuster
 apt install gobuster -y
