@@ -68,6 +68,9 @@ apt install libimage-exiftool-perl -y
 pause "Press Enter to install everything for GDB (Gef etc)"
 apt install gdb -y
 
+#Installing gdbServer
+apt install gdbserver -y
+
 #Installing cmake (needed to Gef install)
 apt install cmake -y
 
