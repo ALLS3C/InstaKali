@@ -65,7 +65,7 @@ pause "Press Enter to install ExifTool"
 apt install libimage-exiftool-perl -y
 
 #Install PIP
-pause "Press Enter to Install PIP
+pause "Press Enter to Install PIP"
 apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential -y
 
 #Installing GDB
