@@ -64,6 +64,10 @@ git clone https://github.com/EmpireProject/Empire.git /opt/Empire
 pause "Press Enter to install ExifTool"
 apt install libimage-exiftool-perl -y
 
+#Install PIP
+pause "Press Enter to Install PIP
+apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential -y
+
 #Installing GDB
 pause "Press Enter to install everything for GDB (Gef etc)"
 apt install gdb -y
@@ -83,7 +87,6 @@ pip3 install keystone-engine unicorn ropper
 
 #Installing PwnTools
 pause "Press Enter to install PwnTools"
-apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential -y
 python3 -m pip install --upgrade pip
 python3 -m pip install --upgrade git+https://github.com/Gallopsled/pwntools.git@dev3
 
