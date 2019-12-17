@@ -82,6 +82,10 @@ apt install cmake -y
 wget -O ~/.gdbinit-gef.py -q https://github.com/hugsy/gef/raw/master/gef.py
 echo source ~/.gdbinit-gef.py >> ~/.gdbinit
 
+#Installing KeePass2
+pause "Press Enter to install KeePass2"
+apt install keepass2 -y
+
 #Installing Keystone, Unicorn and Ropper
 pip3 install keystone-engine unicorn ropper
 
