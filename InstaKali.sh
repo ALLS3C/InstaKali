@@ -21,8 +21,8 @@ mkdir /opt
 
 #Setting up Discover Scripts
 pause "Press Enter to setup Discover Scripts"
-git clone https://github.com/leebaird/discover.git /opt/Discover
-cd /opt/Discover
+git clone https://github.com/leebaird/discover.git /opt/discover
+cd /opt/discover
 ./setup.sh
 
 #Unziping rockyou.txt
@@ -35,22 +35,44 @@ cd ~/Desktop
 wget http://www.ampliasecurity.com/research/wce_v1_41beta_universal.zip
 unzip -d ./wce wce_v1_41beta_universal.zip
 
+#Install nmapAutomator
+pause "Press Enter to install nmapAutomator"
+git clone https://github.com/21y4d/nmapAutomator.git /opt/nmapAutomator
+chmod +x /opt/nmapAutomator/nmapAutomator.sh
+
 #Installing Nmap Banner Plus script
 pause "Press Enter to install Nmap Banner Plus script"
-cd /usr/share/nmap/scripts
-wget https://raw.github.com/hdm/scan-tools/master/nse/banner-plus.nse
+wget https://raw.github.com/hdm/scan-tools/master/nse/banner-plus.nse -P /usr/share/nmap/scripts/
+
+#Installing Nmap Vulners script
+pause "Press Enter to install Nmap Vulners script"
+git clone https://github.com/vulnersCom/nmap-vulners.git /opt/nmap-vulners
+cp /opt/nmap-vulners/vulners.nse /usr/share/nmap/scripts/
+cp /opt/nmap-vulners/http-vulners-regex.nse /usr/share/nmap/scripts/
 
 #Installing Fuzzing Lists
 pause "Press Enter to install Fuzzing Lists"
-git clone https://github.com/danielmiessler/SecLists.git /opt/SecLists
+git clone https://github.com/danielmiessler/SecLists.git /opt/seclists
 
 #Installing Armitage
 pause "Press Enter to install Armitage"
 apt install armitage -y
 
+#Installing Bloodhound
+pause "Press Enter to install Bloodhound"
+apt install bloodhound -y
+
 #Installing Checksec
 pause "Press Enter to install Checksec"
 apt install checksec -y
+
+#Installing ciscot7.py
+pause "Press Enter to install Cisco Type 7 password cracker"
+git clone https://github.com/theevilbit/ciscot7.git /opt/ciscot7
+
+#Installing Crackmapexec
+pause "Press Enter to install Crackmapexec"
+apt install crackmapexec -y
 
 #Installing DBeaver
 pause "Press Enter to install DBeaver"
@@ -58,7 +80,11 @@ apt install dbeaver dbeaver-dbgsym -y
 
 #Installing Empire
 pause "Press Enter to install Empire"
-git clone https://github.com/EmpireProject/Empire.git /opt/Empire
+git clone https://github.com/EmpireProject/Empire.git /opt/empire
+
+#Installing EvilWinRM
+pause "Press Enter to install EvilWinRM"
+git clone https://github.com/Hackplayers/evil-winrm.git /opt/evil-winrm
 
 #Installing ExifTool
 pause "Press Enter to install ExifTool"
@@ -73,12 +99,15 @@ pause "Press Enter to install everything for GDB (Gef etc)"
 apt install gdb -y
 
 #Installing gdbServer
+pause "Press Enter to install gdbServer"
 apt install gdbserver -y
 
 #Installing cmake (needed to Gef install)
+pause "Press Enter to install cmake"
 apt install cmake -y
 
 #Installing Gef
+pause "Press Enter to install cmake"
 wget -O ~/.gdbinit-gef.py -q https://github.com/hugsy/gef/raw/master/gef.py
 echo source ~/.gdbinit-gef.py >> ~/.gdbinit
 
@@ -87,6 +116,7 @@ pause "Press Enter to install KeePass2"
 apt install keepass2 -y
 
 #Installing Keystone, Unicorn and Ropper
+pause "Press Enter to install Keystone, Unicorn and Ropper"
 pip3 install keystone-engine unicorn ropper
 
 #Installing PwnTools
@@ -95,37 +125,55 @@ python3 -m pip install --upgrade pip
 python3 -m pip install --upgrade git+https://github.com/Gallopsled/pwntools.git@dev3
 
 #Installing Gobuster
+pause "Press Enter to install Gobuster"
 apt install gobuster -y
 
 #Installing JAWS
+pause "Press Enter to install JAWS"
 git clone https://github.com/411Hall/JAWS.git /opt/JAWS
 
 #Installing Johnny
+pause "Press Enter to install Johnny"
 apt install johnny -y
 
 #Installing JQ
+pause "Press Enter to install JQ"
 apt install jq -y
 
 #Installing LinEnum.sh
-git clone https://github.com/rebootuser/LinEnum.git /opt/LinEnum
+pause "Press Enter to install LinEnum"
+git clone https://github.com/rebootuser/LinEnum.git /opt/lineum
 
 #Installing Nishang
+pause "Press Enter to install Nishang"
 git clone https://github.com/samratashok/nishang.git /opt/Nishang
 
 #Installing PyPy
-git clone https://github.com/DominicBreuker/pspy.git /opt/PsPy
+pause "Press Enter to install PSpy"
+git clone https://github.com/DominicBreuker/pspy.git /opt/pspy
+
+#Installing Reconnoitre
+pause "Press Enter to install Reconnoitre"
+git clone https://github.com/codingo/Reconnoitre.git /opt/reconnoitre
+cd /opt/reconnoitre/
+python3 setup.py install
+
+#Installing Redis Tools
+pause "Press Enter to install Redis tools"
+apt install redis-tools -y
 
 #Installing RLwrap
+pause "Press Enter to install Rlwrap"
 apt install rlwap -y
 
 #Installing Unicorn
-git clone https://github.com/trustedsec/unicorn.git /opt/Unicorn
+pause "Press Enter to install Unicorn"
+git clone https://github.com/trustedsec/unicorn.git /opt/unicorn
 
 #Installing Veil
 pause "Press Enter to install Veil"
-git clone https://github.com/Veil-Framework/Veil.git /opt/Veil
-cd /opt/Veil/
-./config/setup.sh --force --silent
+git clone https://github.com/Veil-Framework/Veil.git /opt/veil
+./opt/veil/config/setup.sh --force --silent
 
 #Install Xclip
 pause "Press Enter to install Xclip"
