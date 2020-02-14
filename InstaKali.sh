@@ -107,7 +107,7 @@ pause "Press Enter to install cmake"
 apt install cmake -y
 
 #Installing Gef
-pause "Press Enter to install cmake"
+pause "Press Enter to install Gef"
 wget -O ~/.gdbinit-gef.py -q https://github.com/hugsy/gef/raw/master/gef.py
 echo source ~/.gdbinit-gef.py >> ~/.gdbinit
 
