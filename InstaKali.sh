@@ -179,6 +179,10 @@ pause "Press Enter to install Veil"
 git clone https://github.com/Veil-Framework/Veil.git /opt/veil
 ./opt/veil/config/setup.sh --force --silent
 
+#Installing WindAPSearch
+pause "Press Enter to install WindAPSearch"
+git clone https://github.com/ropnop/windapsearch.git /opt/windapsearch
+
 #Install Xclip
 pause "Press Enter to install Xclip"
 apt install xclip -y
