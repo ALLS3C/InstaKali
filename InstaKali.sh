@@ -102,7 +102,7 @@ apt install gdb -y
 pause "Press Enter to install gdbServer"
 apt install gdbserver -y
 
-#Installing cmake (needed to Gef install)
+#Installing cmake (needed to install Gef)
 pause "Press Enter to install cmake"
 apt install cmake -y
 
@@ -118,6 +118,10 @@ apt install keepass2 -y
 #Installing Keystone, Unicorn and Ropper
 pause "Press Enter to install Keystone, Unicorn and Ropper"
 pip3 install keystone-engine unicorn ropper
+
+#Installing LFI Suite
+pause "Press Enter to install LFI Suite"
+git clone https://github.com/D35m0nd142/LFISuite.git /opt/LFISuite
 
 #Installing PwnTools
 pause "Press Enter to install PwnTools"
