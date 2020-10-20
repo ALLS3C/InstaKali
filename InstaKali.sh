@@ -343,13 +343,11 @@ pause "Press Enter to install Xclip"
 apt install xclip -y
 
 # =============================
-# Installing Firefox Extensions
+# Installing GhostPack Seatbelt
 # =============================
 
-pause "Press Enter to open pages to each Firefox web browser
-extension. Install each one."
-firefox https://addons.mozilla.org/en-US/firefox/addon/web-developer
-firefox https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard
+pause "Press Enter to install GhostPack Seatbelt"
+git clone https://github.com/GhostPack/Seatbelt.git /opt/seatbelt
 
 # ===========
 # We're done!
