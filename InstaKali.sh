@@ -12,6 +12,36 @@ pause "Press Enter to update O/S"
 apt-get update
 apt-get dist-upgrade -y
 
+# ==================
+# Setting up aliases
+# ==================
+
+pause "Press Enter to setup aliases"
+touch ~/.bash_aliases
+echo "alias l='ls -la'" > ~/.bash_aliases
+
+# ====================
+# Setting up tmux.conf
+# ====================
+
+pause "Press Enter to setup tmux conf"
+touch ~/.tmux.conf 
+echo "# Remap prefix key to screen" > ~/.tmux.conf
+echo "set -g prefix C-a" >> ~/.tmux.conf
+echo "bind C-a send-prefix" >> ~/.tmux.conf
+echo "unbind C-b" >> ~/.tmux.conf
+echo "" >> ~/.tmux.conf
+echo "# History and renaming" >> ~/.tmux.conf
+echo "set -g history-limit 10000" >> ~/.tmux.conf
+echo "set -g allow-rename off" >> ~/.tmux.conf
+echo "" >> ~/.tmux.conf
+echo "# Search mode Vi (default is emacs)" >> ~/.tmux.conf
+echo "set-window-option -g mode-keys vi" >> ~/.tmux.conf
+echo "" >> ~/.tmux.conf
+echo "# Changing split window keys and retaining current working directory on split" >> ~/.tmux.conf
+echo "bind \ split-window -h -c '#{pane_current_path}'  # Split panes horizontal" >> ~/.tmux.conf                            
+echo "bind - split-window -v -c '#{pane_current_path}'  # Split panes vertically" >> ~/.tmux.conf
+
 # ==============================
 # Setting up Metasploit database
 # ==============================
@@ -209,7 +239,7 @@ git clone https://github.com/D35m0nd142/LFISuite.git /opt/LFISuite
 
 pause "Press Enter to install PwnTools"
 python3 -m pip install --upgrade pip
-python3 -m pip install --upgrade git+https://github.com/Gallopsled/pwntools.git@dev3
+python3 -m pip install --upgrade git+https://github.com/Gallopsled/pwntools.git
 
 # ===================
 # Installing Gobuster
