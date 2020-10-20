@@ -311,7 +311,7 @@ apt install redis-tools -y
 # =================
 
 pause "Press Enter to install Rlwrap"
-apt install rlwap -y
+apt install rlwrap -y
 
 # ==================
 # Installing Unicorn
