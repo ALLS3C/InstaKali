@@ -326,7 +326,7 @@ git clone https://github.com/trustedsec/unicorn.git /opt/unicorn
 
 pause "Press Enter to install Veil"
 git clone https://github.com/Veil-Framework/Veil.git /opt/veil
-./opt/veil/config/setup.sh --force --silent
+/opt/veil/config/setup.sh --force --silent
 
 # =======================
 # Installing WindAPSearch
