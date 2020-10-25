@@ -17,30 +17,14 @@ apt-get dist-upgrade -y
 # ==================
 
 pause "Press Enter to setup aliases"
-touch ~/.bash_aliases
-echo "alias l='ls -la'" > ~/.bash_aliases
+mv .bash_aliases ~/.bash_aliases
 
 # ====================
 # Setting up tmux.conf
 # ====================
 
 pause "Press Enter to setup tmux conf"
-touch ~/.tmux.conf 
-echo "# Remap prefix key to screen" > ~/.tmux.conf
-echo "set -g prefix C-a" >> ~/.tmux.conf
-echo "bind C-a send-prefix" >> ~/.tmux.conf
-echo "unbind C-b" >> ~/.tmux.conf
-echo "" >> ~/.tmux.conf
-echo "# History and renaming" >> ~/.tmux.conf
-echo "set -g history-limit 10000" >> ~/.tmux.conf
-echo "set -g allow-rename off" >> ~/.tmux.conf
-echo "" >> ~/.tmux.conf
-echo "# Search mode Vi (default is emacs)" >> ~/.tmux.conf
-echo "set-window-option -g mode-keys vi" >> ~/.tmux.conf
-echo "" >> ~/.tmux.conf
-echo "# Changing split window keys and retaining current working directory on split" >> ~/.tmux.conf
-echo "bind \ split-window -h -c '#{pane_current_path}'  # Split panes horizontal" >> ~/.tmux.conf                            
-echo "bind - split-window -v -c '#{pane_current_path}'  # Split panes vertically" >> ~/.tmux.conf
+mv .tmux.conf ~/.tmux.conf
 
 # ==============================
 # Setting up Metasploit database
