@@ -340,6 +340,15 @@ git clone https://github.com/GhostPack/Seatbelt.git /opt/seatbelt
 pause "Press Enter to install Golang"
 apt-get install golang
 
+# =================
+# Installing ffuf
+# =================
+
+pause "Press Enter to install ffuf"
+git clone https://github.com/ffuf/ffuf.git /opt/ffuf
+
+
+
 # ===========
 # We're done!
 # ===========
