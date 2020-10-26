@@ -333,6 +333,13 @@ apt install xclip -y
 pause "Press Enter to install GhostPack Seatbelt"
 git clone https://github.com/GhostPack/Seatbelt.git /opt/seatbelt
 
+# =================
+# Installing Golang
+# =================
+
+pause "Press Enter to install Golang"
+apt-get install golang
+
 # ===========
 # We're done!
 # ===========
