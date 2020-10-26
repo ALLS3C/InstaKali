@@ -347,7 +347,12 @@ apt-get install golang
 pause "Press Enter to install ffuf"
 git clone https://github.com/ffuf/ffuf.git /opt/ffuf
 
+# ===========================
+# Installing Username Anarchy
+# ===========================
 
+pause "Press Enter to install Username Anarchy"
+git clone https://github.com/urbanadventurer/username-anarchy.git /opt/username-anarchy
 
 # ===========
 # We're done!
