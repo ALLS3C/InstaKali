@@ -152,6 +152,7 @@ git clone https://github.com/EmpireProject/Empire.git /opt/empire
 
 pause "Press Enter to install EvilWinRM"
 git clone https://github.com/Hackplayers/evil-winrm.git /opt/evil-winrm
+gem install evil-winrm
 
 # ===================
 # Installing ExifTool
