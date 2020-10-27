@@ -355,6 +355,19 @@ git clone https://github.com/ffuf/ffuf.git /opt/ffuf
 pause "Press Enter to install Username Anarchy"
 git clone https://github.com/urbanadventurer/username-anarchy.git /opt/username-anarchy
 
+# ================
+# Installing PEASS
+# ================
+
+pause "Press Enter to install PEASS"
+git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git /opt/privilege-escalation-awesome-scripts-suites
+
+# ===================
+# Installing Kerbrute
+# ===================
+pause "Press Enter to install Kerbrute"
+go get github.com/ropnop/kerbrute
+
 # ===========
 # We're done!
 # ===========
