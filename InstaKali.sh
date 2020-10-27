@@ -374,7 +374,7 @@ go get github.com/ropnop/kerbrute
 # =============================================
 
 pause "Press Enter to install SharpHound for Bloodhound"
-wget https://github.com/BloodHoundAD/BloodHound/blob/master/Ingestors/SharpHound.exe -P /opt/bloodhound/
+wget https://github.com/BloodHoundAD/BloodHound/raw/master/Ingestors/SharpHound.exe -P /opt/bloodhound/
 
 # ===========
 # We're done!
