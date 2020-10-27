@@ -365,8 +365,16 @@ git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-su
 # ===================
 # Installing Kerbrute
 # ===================
+
 pause "Press Enter to install Kerbrute"
 go get github.com/ropnop/kerbrute
+
+# =============================================
+# Installing SharpHound Ingestor for Bloodhound
+# =============================================
+
+pause "Press Enter to install SharpHound for Bloodhound"
+wget https://github.com/BloodHoundAD/BloodHound/blob/master/Ingestors/SharpHound.exe -P /opt/bloodhound/
 
 # ===========
 # We're done!
