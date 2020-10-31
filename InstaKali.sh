@@ -26,23 +26,6 @@ mv /opt/InstaKali/.bash_aliases ~/.bash_aliases
 pause "Press Enter to setup tmux conf"
 mv /opt/InstaKali/.tmux.conf ~/.tmux.conf
 
-# ==============================
-# Setting up Metasploit database
-# ==============================
-
-pause "Press Enter to setup Metasploit database (note this does NOT enable Metasploit Logging)"
-service postgresql start
-service metasploit start
-
-# ===========================
-# Setting up Discover Scripts
-# ===========================
-
-pause "Press Enter to setup Discover Scripts"
-git clone https://github.com/leebaird/discover.git /opt/discover
-cd /opt/discover
-./opt/discover/setup.sh
-
 # ====================
 # Unziping rockyou.txt
 # ====================
