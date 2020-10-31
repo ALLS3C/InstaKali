@@ -17,6 +17,8 @@ apt-get dist-upgrade -y
 # ==========================
 
 pause "Press Enter to setup fuse & vm tools"
+mkdir /mnt/hgfs
+mkdir /mnt/vm_share
 apt --reinstall install open-vm-tools-desktop fuse -y
 
 # =========================
