@@ -12,12 +12,26 @@ pause "Press Enter to update O/S"
 apt-get update
 apt-get dist-upgrade -y
 
+# ==========================
+# Setting up fuse & vm tools
+# ==========================
+
+pause "Press Enter to setup fuse & vm tools"
+apt --reinstall install open-vm-tools-desktop fuse -y
+
 # =========================
 # Setting up aliases & tmux
 # =========================
 
 pause "Press Enter to setup aliases"
 sudo mv /opt/InstaKali/bash_aliases ~/.bash_aliases && sudo mv /opt/InstaKali/tmux.conf ~/.tmux.conf
+
+# ===========================
+# Setting up mounting scripts
+# ===========================
+
+pause "Press Enter to setup mounting scripts"
+sudo mv /opt/InstaKali/mount.sh ~/Desktop/mount.sh
 
 # ====================
 # Unziping rockyou.txt
