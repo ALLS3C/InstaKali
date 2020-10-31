@@ -339,6 +339,13 @@ git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-su
 pause "Press Enter to install Kerbrute"
 go get github.com/ropnop/kerbrute
 
+# =================
+# Installing PyLDAP
+# =================
+
+pause "Press Enter to install PyLDAP"
+sudo apt install python3-pyldap -y
+
 # =============================================
 # Installing SharpHound Ingestor for Bloodhound
 # =============================================
