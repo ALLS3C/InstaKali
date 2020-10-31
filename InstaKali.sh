@@ -17,7 +17,7 @@ apt-get dist-upgrade -y
 # ===========================
 
 pause "Press Enter to setup aliases"
-mv /opt/InstaKali/bash_aliases ~/.bash_aliases && mv /opt/InstaKali/tmux.conf ~/.tmux.conf
+sudo mv /opt/InstaKali/bash_aliases ~/.bash_aliases && sudo mv /opt/InstaKali/tmux.conf ~/.tmux.conf
 
 # ====================
 # Unziping rockyou.txt
