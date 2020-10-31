@@ -301,7 +301,7 @@ git clone https://github.com/GhostPack/Seatbelt.git /opt/seatbelt
 # =================
 
 pause "Press Enter to install Golang"
-apt-get install golang
+apt-get install golang -y
 
 # =================
 # Installing ffuf
