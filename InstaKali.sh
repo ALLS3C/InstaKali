@@ -73,13 +73,6 @@ cp /opt/nmap-vulners/http-vulners-regex.nse /usr/share/nmap/scripts/
 pause "Press Enter to install Fuzzing Lists"
 git clone https://github.com/danielmiessler/SecLists.git /opt/seclists
 
-# ==============================
-# Installing Armitage
-# ===================
-
-pause "Press Enter to install Armitage"
-apt install armitage -y
-
 # =====================
 # Installing Bloodhound
 # =====================
@@ -100,13 +93,6 @@ apt install checksec -y
 
 pause "Press Enter to install Cisco Type 7 password cracker"
 git clone https://github.com/theevilbit/ciscot7.git /opt/ciscot7
-
-# =======================
-# Installing Crackmapexec
-# =======================
-
-pause "Press Enter to install Crackmapexec"
-apt install crackmapexec -y
 
 # ==================
 # Installing DBeaver
