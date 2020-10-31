@@ -41,7 +41,7 @@ service metasploit start
 pause "Press Enter to setup Discover Scripts"
 git clone https://github.com/leebaird/discover.git /opt/discover
 cd /opt/discover
-./setup.sh
+./opt/discover/setup.sh
 
 # ====================
 # Unziping rockyou.txt
