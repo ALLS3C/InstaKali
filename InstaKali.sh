@@ -17,14 +17,14 @@ apt-get dist-upgrade -y
 # ==================
 
 pause "Press Enter to setup aliases"
-mv .bash_aliases ~/.bash_aliases
+mv /opt/InstaKali/.bash_aliases ~/.bash_aliases
 
 # ====================
 # Setting up tmux.conf
 # ====================
 
 pause "Press Enter to setup tmux conf"
-mv .tmux.conf ~/.tmux.conf
+mv /opt/InstaKali/.tmux.conf ~/.tmux.conf
 
 # ==============================
 # Setting up Metasploit database
@@ -33,13 +33,6 @@ mv .tmux.conf ~/.tmux.conf
 pause "Press Enter to setup Metasploit database (note this does NOT enable Metasploit Logging)"
 service postgresql start
 service metasploit start
-
-# =================
-# Create /opt folder
-# =================
-
-pause "Press Enter to create the opt folder"
-mkdir /opt
 
 # ===========================
 # Setting up Discover Scripts
